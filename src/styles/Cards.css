@@ -1,0 +1,22 @@
+.card-input-fields {
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border: none;
+    border-bottom: 1.5px solid white;
+    caret-color: white;
+    padding-left: 3px;
+    color: white;
+}
+
+.card-input-fields:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .card-input-fields {
+        width: 200px;
+    }
+}

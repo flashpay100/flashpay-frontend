@@ -1,0 +1,57 @@
+.home-links-active {
+    text-decoration: underline;
+    color: white;
+    font-size: 18px;
+}
+
+.home-links-active:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.home-links {
+    text-decoration: none;
+    color: grey;
+    font-size: 18px;
+}
+
+.home-links:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.wallet-fields {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.payment-field {
+    background-color: transparent;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    width: 250px;
+    border: none;
+    border-bottom: 1.5px solid white;
+    caret-color: white;
+    padding-left: 3px;
+    color: white;
+}
+
+.payment-field:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .wallet-fields {
+        font-size: 15px;
+    }
+    .payment-field {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .payment-field {
+        width: 225px;
+    }
+}
