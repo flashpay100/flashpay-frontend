@@ -80,7 +80,7 @@ const Home = ({ defaultCardNumber, transactionValue }) => {
             transactionMessage = "Sent To"
             account = lastTransaction.toAccount
         }
-        else if(lastTransaction.transactionType.includes("Transfer")) {
+        else if(lastTransaction.transactionType.includes("Debited (Transfer)")) {
             transactionMessage = "Transferred To"
             account = lastTransaction.toAccount
         }
