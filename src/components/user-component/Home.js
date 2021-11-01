@@ -3,8 +3,7 @@ import Header from '../global-component/Header'
 import Footer from '../global-component/Footer'
 import '../../styles/Home.css'
 import { getUserDetails } from '../../services/UserService'
-import { payment } from '../../services/WalletService'
-import { addAmount, bankTransfer } from '../../services/WalletService'
+import { payment, addAmount, bankTransfer } from '../../services/WalletService'
 import { getAccounts } from '../../services/AccountService'
 
 const Home = ({ defaultCardNumber, transactionValue }) => {
