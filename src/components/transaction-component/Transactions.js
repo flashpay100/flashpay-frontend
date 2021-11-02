@@ -14,6 +14,7 @@ const Transactions = () => {
             toAccount : '',
             transactionAmount : '',
             transactionType : '',
+            transactionReward : '',
             transactionStatus : ''
         }]
     })
@@ -27,6 +28,7 @@ const Transactions = () => {
                 toAccount : '',
                 transactionAmount : '',
                 transactionType : '',
+                transactionReward : '',
                 transactionStatus : ''
         }]
     })
@@ -142,6 +144,7 @@ const Transactions = () => {
                             <th className="border border-danger px-3 pt-2 pb-3" style={{ textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>To</th>
                             <th className="border border-danger px-3 pt-2 pb-3" style={{ textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>Amount</th>
                             <th className="border border-danger px-3 pt-2 pb-3" style={{ textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>Type</th>
+                            <th className="border border-danger px-3 pt-2 pb-3" style={{ textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>Reward</th>
                             <th className="border border-danger px-3 pt-2 pb-3" style={{ textDecoration: "underline", textDecorationThickness: "2px", textUnderlineOffset: "5px" }}>Status</th>
                         </tr>
                         {transaction.transactions.slice(0).reverse().map((transaction, i) => {
@@ -151,8 +154,9 @@ const Transactions = () => {
                                     <td className="border border-danger px-3 py-2 text-warning">{transaction.transactionDateTime}</td>
                                     <td className="border border-danger px-3 py-2 text-warning">{transaction.fromAccount} ({transaction.fromAccountId})</td>
                                     <td className="border border-danger px-3 py-2 text-warning">{transaction.toAccount} ({transaction.toAccountId})</td>
-                                    <td className="border border-danger px-3 py-2 text-warning">{transaction.transactionAmount}</td>
+                                    <td className="border border-danger px-3 py-2 text-warning">{Math.round(transaction.transactionAmount * 100) / 100}</td>
                                     <td className="border border-danger px-3 py-2 text-warning">{transaction.transactionType}</td>
+                                    <td className="border border-danger px-3 py-2 text-warning">{transaction.transactionReward}</td>
                                     <td className="border border-danger px-3 py-2 text-warning">{transaction.transactionStatus}</td>
                                 </tr>                        
                             );
